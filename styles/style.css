@@ -240,7 +240,7 @@ ol {
 
 .more-button {
   width: 100%;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 .content__details {
@@ -269,8 +269,7 @@ ol {
 .content__list-container {
   height: 298px;
   width: 394px;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: auto;
   position: relative;
 }
 
@@ -284,7 +283,7 @@ ol {
 .content__list-item {
   padding-left: 3px;
   padding-right: 3px;
-  text-overflow: 0;
+  text-overflow: auto;
 }
 
 .content__card-link {
@@ -339,6 +338,10 @@ ol {
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 185px;
 }
 
 .content__video-card-description {
@@ -355,4 +358,5 @@ ol {
   height: 103px;
   object-position: center;
   object-fit: cover;
+  flex-shrink: 0;
 }
