@@ -17,6 +17,8 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -54,8 +56,9 @@ ol {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
+  gap: 31px;
   width: 1140px;
+  align-items: end;
 }
 
 .result {
@@ -64,29 +67,29 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  padding-top: 210px;
 }
 
 .result__video-container {
   width: 100%;
   height: 386px;
+  position: relative
 }
 
 .result__video {
   width: 100%;
   width: 100%;
   height: 100%;
-  object-position: center;
   object-fit: cover;
   cursor: pointer;
 }
 
 .search-form {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   gap: 40px;
+  padding-bottom: 5px;
+  padding-bottom: 13px;
 }
 
 .search-form__fieldset {
@@ -96,6 +99,7 @@ ol {
   gap: 5px;
   border: none;
   padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .search-form__fieldset-title {
@@ -157,7 +161,8 @@ ol {
 
 .search-form__label {
   display: flex;
-  flex-direction: row;
+  width: fit-content;
+  cursor: pointer;
   gap: 5px;
   align-items: center;
 }
@@ -200,16 +205,14 @@ ol {
 }
 
 .button {
-  height: min-content;
+  height: 34px;
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
-  text-align: center;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 100%;
   appearance: none;
   cursor: pointer;
 }
@@ -231,32 +234,36 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 194px;
-  padding-bottom: 7px;
+  min-width: 194px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+  padding-top: 10px;
 }
 
 .content__details {
   display: flex;
+  grid-area: list;
   flex-direction: column;
   gap: 22px;
-  inline-size: 100%;
-  block-size: 100%;
-  padding-top: 121px;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding-bottom: 15px;
 }
 
 .title {
-  color: #fff;
   font-family: "Oswald", sans-serif;
   font-size: 75px;
-  font-style: normal;
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
-  padding-top: 14px;
 }
 
 .content__accent {
-  color: #545050;
+  color: rgb(84 80 80 / 1);
 }
 
 .content__list-container {
@@ -269,12 +276,15 @@ ol {
 
 .content__list {
   display: grid;
-  gap: 28px;
+  gap: 25px;
+  overflow: auto;
+  flex-shrink: 0;
 }
 
 .content__list-item {
   padding-left: 3px;
   padding-right: 3px;
+  text-overflow: 0;
 }
 
 .content__card-link {
@@ -305,7 +315,7 @@ ol {
 }
 
 .content__video-card {
-  padding: 2px;
+  padding: 2px 2px 2px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -345,10 +355,4 @@ ol {
   height: 103px;
   object-position: center;
   object-fit: cover;
-  background-size: auto;
-  gap: 30px;
-}
-
-.more-button {
-  width: 100%;
 }
